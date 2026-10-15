@@ -1,0 +1,18 @@
+# Thư viện cốt lõi cho Tuần 1 - 8 (AI & Data)
+ultralytics>=8.3.0
+opencv-python
+numpy
+pandas
+scipy
+scikit-learn
+ImageHash
+Pillow
+psutil
+
+# Thư viện chuẩn bị sẵn cho Tuần 9 - 12 (Web Backend & Xuất báo cáo)
+fastapi
+uvicorn
+python-multipart
+sqlalchemy
+openpyxl
+reportlab

@@ -1,0 +1,6 @@
+﻿Model,Layers,Parameters (M),GFLOPs,Latency P50 (ms),Latency P95 (ms),FPS (tại P50),Phần cứng
+YOLO11N,N/A,2.62,N/A,10.97,16.36,91.1,NVIDIA GeForce RTX 3050 6GB Laptop GPU
+YOLO11S,N/A,9.46,N/A,14.52,20.03,68.9,NVIDIA GeForce RTX 3050 6GB Laptop GPU
+YOLO11M,N/A,20.11,N/A,30.39,31.77,32.9,NVIDIA GeForce RTX 3050 6GB Laptop GPU
+YOLO11L,N/A,25.37,N/A,N/A,N/A,N/A,Chỉ lấy thông số
+YOLO11X,N/A,56.97,N/A,N/A,N/A,N/A,Chỉ lấy thông số

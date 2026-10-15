@@ -1,0 +1,8 @@
+
+--- NHẬT KÝ THÍ NGHIỆM: 2026-10-15 09:54:27 ---
+Mục đích : Chạy train thử nghiệm kiểm tra môi trường Tuần 1
+Mô hình  : yolo11n.pt
+Cấu hình : epochs=3, imgsz=640, batch=16, optimizer=SGD, lr0=0.01
+Seed     : 42
+Phần cứng: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+Kết quả  : mAP50 = 0.8480, mAP50-95 = 0.6472
