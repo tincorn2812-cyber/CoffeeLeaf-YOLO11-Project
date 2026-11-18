@@ -1,0 +1,35 @@
+# Cấu trúc mạng YOLO11n-CF (Tùy chỉnh chèn CBAM cho dự án CoffeeCare)
+nc: 5 # Số lớp: leaf_rust, cercospora, leaf_miner, red_spider_mite, healthy
+scales:
+  n: [0.33, 0.25, 1024] # Khớp với thông số của bản YOLO11 nano
+
+backbone:
+  # [từ_layer, số_lần_lặp, loại_module, [tham_số]]
+  - [-1, 1, Conv, [64, 3, 2]]    # 0-P1/2
+  - [-1, 1, Conv, [128, 3, 2]]   # 1-P2/4
+  - [-1, 2, C2f, [128, True]]    # 2
+  - [-1, 1, Conv, [256, 3, 2]]   # 3-P3/8
+  - [-1, 4, C2f, [256, True]]    # 4
+  - [-1, 1, CBAM, [256]]         # 5: CHÈN CBAM BLOCK (Giúp lọc nhiễu hậu cảnh)
+  - [-1, 1, Conv, [512, 3, 2]]   # 6-P4/16
+  - [-1, 4, C2f, [512, True]]    # 7
+  - [-1, 1, CBAM, [512]]         # 8: CHÈN CBAM BLOCK (Tập trung vào vết bệnh)
+  - [-1, 1, Conv, [1024, 3, 2]]  # 9-P5/32
+  - [-1, 2, C2f, [1024, True]]   # 10
+  - [-1, 1, CBAM, [1024]]        # 11: CHÈN CBAM BLOCK
+  - [-1, 1, SPPF, [1024, 5]]     # 12
+
+head:
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']] # 13
+  - [[-1, 8], 1, Concat, [1]]                  # 14 (Nối với layer 8 - CBAM P4)
+  - [-1, 2, C2f, [512]]                        # 15
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']] # 16
+  - [[-1, 5], 1, Concat, [1]]                  # 17 (Nối với layer 5 - CBAM P3)
+  - [-1, 2, C2f, [256]]                        # 18 (P3/8-small)
+  - [-1, 1, Conv, [256, 3, 2]]                 # 19
+  - [[-1, 15], 1, Concat, [1]]                 # 20
+  - [-1, 2, C2f, [512]]                        # 21 (P4/16-medium)
+  - [-1, 1, Conv, [512, 3, 2]]                 # 22
+  - [[-1, 12], 1, Concat, [1]]                 # 23
+  - [-1, 2, C2f, [1024]]                       # 24 (P5/32-large)
+  - [[18, 21, 24], 1, Detect, [nc]]            # 25 (Đầu ra Detect)

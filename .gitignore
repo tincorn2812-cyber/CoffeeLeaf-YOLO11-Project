@@ -1,5 +1,24 @@
+# Python & Virtual Env
 venv/
 __pycache__/
+*.pyc
+
+# Datasets & Archives (Up riêng lên Google Drive / Kaggle)
+datasets/
+*.zip
+*.rar
+
+# YOLO Weights (Bỏ qua các model gốc nặng ở ngoài, chỉ giữ best.pt 5.5MB trong web/models)
 runs/
 *.pt
+!web/models/best.pt
+
+# Maven & IDE Build
+web/target/
+web/.settings/
+.kombai/
+web/.kombai/
 .DS_Store
+
+# Ảnh quét phát sinh trong quá trình chạy thử
+web/uploads/scans/*

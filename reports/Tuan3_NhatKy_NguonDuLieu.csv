@@ -1,0 +1,8 @@
+﻿Tên bộ dữ liệu,Nguồn URL,Giấy phép,Hệ nhãn gốc,Quy tắc ánh xạ (Gốc -> Đề tài),Số ảnh hợp lệ lấy được
+BarakoBama - Coffee Leaf Disease.v4i.yolov11,https://universe.roboflow.com/barakobama/barakobama-coffee-leaf-disease/dataset/4,CC BY 4.0,"['algal_growth', 'cercospora', 'leaf_miner', 'leaf_rust', 'red_spider_mite', 'sooty-mold']","{1: 1, 2: 2, 3: 0, 4: 3}",13304
+coffee leaf disease.v3i.yolov11,https://universe.roboflow.com/object-detection-5ucmm/coffee-leaf-disease-jtif1/dataset/3,CC BY 4.0,"['brown eye spot', 'healthy', 'leaf minor', 'leaf rust', 'red spider mite']","{0: 1, 1: 4, 2: 2, 3: 0, 4: 3}",1391
+Coffee Leaf Disease.v6i.yolov11,https://universe.roboflow.com/project-rsejb/coffee-leaf-disease-tqeir/dataset/6,CC BY 4.0,"['algal_spot', 'brown_eye_spot', 'healthy', 'miner', 'phoma', 'powdery_mildew']","{1: 1, 2: 4, 3: 2}",2079
+coffee leaf.v7i.yolov11,https://universe.roboflow.com/coffee-leaf-project/coffee-leaf-1jk2g/dataset/7,CC BY 4.0,"['Leaf Rust Spots', 'Leaf-Rust-Severe', 'Malnutrition', 'Old Coffee Leaf', 'Pest', 'healthy']","{0: 0, 1: 0, 5: 4}",881
+Coffee Leaves Detection.v1i.yolov11,https://universe.roboflow.com/abhishek-sinha-sb7wj/coffee-leaves-detection/dataset/1,CC BY 4.0,"['Miner', 'Rust']","{0: 2, 1: 0}",538
+Detection-Diesease-Coffee-Leaf.v1i.yolov11,https://universe.roboflow.com/jonatan-fragoso/detection-diesease-coffee-leaf/dataset/1,CC BY 4.0,"['Cercospora', 'Miner', 'Phoma', 'Rust']","{0: 1, 1: 2, 3: 0}",275
+I30-leaf-type.v7i.yolov11,https://universe.roboflow.com/i30/i30-leaf-type/dataset/7,CC BY 4.0,"['coffee_leaf_healthy', 'coffee_leaf_rust', 'healthy leaf', 'lemon health leaf']","{0: 4, 1: 0}",251

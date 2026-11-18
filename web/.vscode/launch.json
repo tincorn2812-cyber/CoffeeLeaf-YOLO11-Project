@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run CafeLeaf Spring Boot Server",
+            "request": "launch",
+            "mainClass": "com.cafeleaf.CafeLeafApplication",
+            "projectName": "cafeleaf-web",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+﻿Class ID,Tên lớp bệnh,Train BBoxes (80%),Val BBoxes (10%),Test BBoxes (10%),Tổng BBoxes
+0,leaf_rust,20934,2182,2562,25678
+1,cercospora,4560,502,595,5657
+2,leaf_miner,7175,921,865,8961
+3,red_spider_mite,2011,234,243,2488
+4,healthy,456,53,51,560
